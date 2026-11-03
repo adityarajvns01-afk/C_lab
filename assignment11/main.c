@@ -1,7 +1,18 @@
 #include <stdio.h>
-extern int a;
 
-int main() {
-    printf("Value of a: %d\n", a);
+extern int value;
+
+void display();
+
+int main()
+{
+    printf("Before modification:\n");
+    display();
+
+    value = 50;
+
+    printf("After modification using extern:\n");
+    display();
+
     return 0;
 }
